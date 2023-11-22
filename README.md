@@ -1,5 +1,10 @@
 # Cognito User List
 
+## Requirements
+
+- Node.js
+- AWS account
+
 ## How to use
 
 - Check out repo
