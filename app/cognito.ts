@@ -46,7 +46,6 @@ function createCommand(token?: string) {
 export async function getAllUsers() {
   const users: User[] = [];
   let cmd: ListUsersCommand | undefined = createCommand();
-  let i = 3;
   while (cmd) {
     console.log("Query Cognito");
     const response = await client.send(cmd);
@@ -67,10 +66,6 @@ export async function getAllUsers() {
       cmd = createCommand(response.PaginationToken);
     } else {
       cmd = undefined;
-    }
-    i--;
-    if (i === 0) {
-      break;
     }
   }
   return users;
