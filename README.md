@@ -1,38 +1,26 @@
-# Welcome to Remix!
+# Cognito User List
 
-- [Remix Docs](https://remix.run/docs)
+## How to use
 
-## Development
-
-From your terminal:
-
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
+- Check out repo
+- Install dependencies `npm install`
+- Make sure you exported the AWS credentials in the terminal
 
 ```sh
-npm run build
+export AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
 ```
 
-Then run the app in production mode:
+- Export your AWS region in the terminal
 
 ```sh
-npm start
+export AWS_REGION=YOUR_AWS_REGION
 ```
 
-Now you'll need to pick a host to deploy it to.
+- Export your Cognito User Pool ID
 
-### DIY
+```sh
+export COGNITO_USER_POOL_ID=YOUR_COGNITO_USER_POOL_ID
+```
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+- Run the application `npm run dev`
